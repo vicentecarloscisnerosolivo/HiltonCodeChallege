@@ -2,9 +2,9 @@ package com.vcco.hiltoncodechallenge.di.module
 
 import android.content.Context
 import androidx.room.Room
-import androidx.room.RoomDatabase
 import com.vcco.hiltoncodechallenge.BuildConfig
 import com.vcco.hiltoncodechallenge.database.AppDatabase
+import com.vcco.hiltoncodechallenge.network.SearchIPService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -40,14 +40,21 @@ object ApplicationModule {
             .client(okHttpClient)
             .build()
 
+    @Singleton
+    @Provides
+    fun provideSearchIpService(retrofit: Retrofit) =
+        retrofit.create(SearchIPService::class.java)
+
 
     @Singleton
     @Provides
-    fun provideDataBase(@ApplicationContext context: Context): RoomDatabase =
+    fun provideDataBase(@ApplicationContext context: Context): AppDatabase =
         Room.databaseBuilder(
             context,
             AppDatabase::class.java,
             BuildConfig.DATABASE_NAME
-        )
-            .build()
+        ).build()
+
+    @Provides
+    fun provideIpInfoDao(database: AppDatabase) = database.ipInfoDao()
 }

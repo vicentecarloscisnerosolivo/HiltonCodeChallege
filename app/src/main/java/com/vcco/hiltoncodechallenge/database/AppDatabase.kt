@@ -2,10 +2,10 @@ package com.vcco.hiltoncodechallenge.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.vcco.hiltoncodechallenge.database.dao.IPInfoDao
-import com.vcco.hiltoncodechallenge.database.model.IPInfo
+import com.vcco.hiltoncodechallenge.database.dao.DomainInfoDao
+import com.vcco.hiltoncodechallenge.database.model.DomainInfo
 
-@Database(entities = [IPInfo::class], version = 1)
+@Database(entities = [DomainInfo::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun ipInfoDao(): IPInfoDao
+    abstract fun ipInfoDao(): DomainInfoDao
 }

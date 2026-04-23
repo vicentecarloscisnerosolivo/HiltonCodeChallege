@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">HiltonCodeChallenge</string>
+    <string name="search_ip">Search Ip Info</string>
+    <string name="search_button">Search</string>
+    <string name="result">Result</string>
+    <string name="result_city">City: </string>
+    <string name="result_region_name">Region Name: </string>
+    <string name="country_result">Country: </string>
+    <string name="result_latitude">Latitude: </string>
+    <string name="result_longitude">Longitude: </string>
+    <string name="result_isp">ISP: </string>
+    <string name="result_organization">Organization: </string>
+    <string name="result_query">Query: </string>
+    <string name="result_time_query">Last search time: %s</string>
+    <string name="invalid_ip">Invalid Ip Address, please enter a valid ip</string>
+    <string name="search_error">Error: %s</string>
 </resources>
