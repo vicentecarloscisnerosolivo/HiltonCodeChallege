@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "com.vcco.hiltoncodechallenge"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -73,10 +73,14 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
+    //ViewModel
+    implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
     //GSON
     implementation(libs.gson)
     implementation(libs.gson.converter)
-//
+
     //Room
     implementation(libs.room)
     kapt(libs.room.compiler)
@@ -94,12 +98,21 @@ dependencies {
 
     //Testing
     testImplementation(libs.junit)
+    testImplementation(libs.coroutines.test)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    //Mockito
+    testImplementation(libs.mockito.inline)
+    testImplementation(libs.mockito.android)
+
+    //Hilt Testing
+    testImplementation(libs.dagger.hilt.testing)
+    kaptTest(libs.dagger.hilt.compilation)
 }
 
 kapt{

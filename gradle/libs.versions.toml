@@ -11,11 +11,12 @@ activityCompose = "1.9.2"
 composeBom = "2024.04.01"
 retrofitVersion = "2.9.0"
 gsonVersion = "2.8.6"
-multidexVersion = "2.0.1"
 okHttpVersion = "4.12.0"
 hiltVersion = "2.51.1"
-rxJavaVersion = "3.0.0"
 roomVersion = "2.5.0"
+mockitoInlineVersion = "5.2.0"
+mockitoKotlinVersion = "5.11.0"
+
 
 
 [libraries]
@@ -36,18 +37,18 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gsonVersion" }
 gson-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
-rxjava-adapter = { group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref = "retrofitVersion" }
 okHttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttpVersion" }
 okHttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttpVersion" }
 dagger-hilt-compilation = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltVersion" }
 dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltVersion" }
-rxjava = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxJavaVersion" }
-rxandroid = { group = "io.reactivex.rxjava3", name = "rxandroid", version.ref = "rxJavaVersion" }
-androidx-lifecycle-reactive-streams = { group = "androidx.lifecycle", name = "lifecycle-reactivestreams", version.ref = "lifecycleRuntimeKtx" }
-androidx-multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidexVersion" }
-kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutinesVersion" }
+dagger-hilt-testing = {group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hiltVersion"}
+coroutines-test = { group = "org.jetbrains.kotlinx" , name = "kotlinx-coroutines-test", version.ref = "coroutinesVersion"}
+androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
 room  = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion"}
+mockito-inline= { group = "org.mockito", name = "mockito-inline", version.ref = "mockitoInlineVersion" }
+mockito-android = {group = "org.mockito", name="mockito-android", version.ref = "mockitoKotlinVersion"}
 
 
 [plugins]

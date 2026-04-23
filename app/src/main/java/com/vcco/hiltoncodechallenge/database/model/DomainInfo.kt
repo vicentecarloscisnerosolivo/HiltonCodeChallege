@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class IPInfo(
+data class DomainInfo(
     @PrimaryKey val query: String,
     val status: String,
     val country: String,
